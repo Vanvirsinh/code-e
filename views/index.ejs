@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE·E - Image Generator Clone</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" sizes="150x150" href="images/logo.png">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="/">
+            <img src="images/logo.png" alt="CODE-E">
+            <h2>CODE·E</h2>
+        </a>
+    </header>
+
+    <div class="main-container">
+        <h1 class="title">Generate Images with Prompts</h1>
+        <form action="/your-image" method="get">
+            <input type="text" name="q" placeholder="Enter a detailed description about the image" onfocus="focused()"
+                onblur="blurred()" autocomplete="off">
+            <button id="generateBtn" type="submit">Generate</button>
+        </form>
+
+        <h2 class="demo-image-title">Demo of Generated Images:</h2>
+        <div class="demo-images">
+            <div class="ind-image"
+                data-image="An illustration where a girl in a yellow dress with yellow fields in the background night scene">
+                <img src="images/demo-1.png" alt="">
+            </div>
+            <div class="ind-image" data-image="A black deer eating grass in the jungle">
+                <img src="images/demo-2.png" alt="">
+            </div>
+            <div class="ind-image" data-image="Two Lamborghinis parked in a big house">
+                <img src="images/demo-3.png" alt="">
+            </div>
+            <div class="ind-image" data-image="A man riding a dog in a garden">
+                <img src="images/demo-4.png" alt="">
+            </div>
+            <div class="ind-image" data-image="A smiling Monalisa's real art">
+                <img src="images/demo-5.png" alt="">
+            </div>
+            <div class="ind-image" data-image="A child worshiping Lord Shiva's big avatar">
+                <img src="images/demo-6.png" alt="">
+            </div>
+            <div class="ind-image" data-image="Digital art of humans and robots working together">
+                <img src="images/demo-7.png" alt="">
+            </div>
+            <div class="ind-image" data-image="A man watching the end of the earth is the last man on the earth">
+                <img src="images/demo-8.png" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>

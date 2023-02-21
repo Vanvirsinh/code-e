@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE·E - <%= query %>
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="150x150" href="images/logo.png">
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <img src="images/logo.png" alt="CODE-E">
+            <h2>CODE·E</h2>
+        </a>
+    </header>
+
+    <div class="main-container">
+        <form action="/your-image" method="get">
+            <input type="text" name="q" value="<%= query %>" placeholder="Enter a detailed description about the image"
+                onfocus="focused()" onblur="blurred()" autocomplete="off">
+            <button id="generateBtn" type="submit">Generate</button>
+        </form>
+        <h2 class="demo-image-title">Results:</h2>
+        <div class="demo-images">
+            <% response.data.data.forEach((data)=> { %>
+                <div class="ind-image" data-image="<%= query %>">
+                    <img src="<%= data.url %>" alt="<%= query %>">
+                    <div class="container">
+                        <div class="loader"></div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>
